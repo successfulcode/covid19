@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import classes from './App.module.scss';
 import { fetchData } from './api';
 import { Cards, Charts, CountryPicker, Footer } from './components';
@@ -27,16 +26,13 @@ class App extends Component {
         const { data, country } = this.state;
 
         return (
-            <React.Fragment>
-                <CssBaseline />
-                <div className={classes.container}>
-                    <img src={covid19Image} alt='COVID-19' />
-                    <Cards data={data} />
-                    <CountryPicker handleCountryChange={this.handleCountryChange} />
-                    <Charts data={data} country={country} />
-                    <Footer />
-                </div>
-            </React.Fragment>
+            <div className={classes.container}>
+                <img src={covid19Image} alt='COVID-19' />
+                <Cards data={data} />
+                <CountryPicker handleCountryChange={this.handleCountryChange} />
+                <Charts data={data} country={country} />
+                <Footer />
+            </div>
         )
     }
 }
