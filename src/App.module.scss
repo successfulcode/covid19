@@ -4,10 +4,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    // height: 100vh;
     img{
 width: 370px;
 margin-top: 50px;
+padding: 5px;
     }
 }
 
@@ -18,5 +19,4 @@ margin-top: 50px;
             width: 100%;
         }
     }
-
 }
